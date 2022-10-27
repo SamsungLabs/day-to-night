@@ -39,15 +39,15 @@ year = {2022},
   - matplotlib 
   - tensorboard 
   - scikit-image==0.15.0 
-- Download the dataset [[link]](https://ln5.sync.com/dl/e41046550#rwsh237k-3hask8ad-d7z56ai4-5qmbic36), and copy to `./dataset/` 
-- (Optional) Download pre-trained models [[link]](https://ln5.sync.com/dl/8d22ddb70#9syg3v9d-dg633s7k-se9nga4t-7disryr9), and copy to `./models/`
+- Download the dataset [[link]](https://ln5.sync.com/dl/ad8546d50#2atz8rpn-gjq5s8dq-u2revfvg-q2egqetr), and copy to `./dataset/` 
+- (Optional) Download pre-trained models [[link]](https://ln5.sync.com/dl/aaba12730#hwyf4g96-ibtjtpid-qsr5rdzt-nvkz2tas), and copy to `./models/`
 
 
 ### Convert day images to synthetic nighttime images
 - `python3 prepare_data.py --savefoldername night --dim --relight --relight_local`
 - Synthetic nighttime images will be saved to `synthetic_datasets/night`
 - Note: While synthesizing our nighttime images, we have also added a few *saturated lights* to mimic light bulbs in nighttime scenes (see the parameter `num_sat_lights` in `prepare_data.py`). Although not mentioned in our paper, we found that adding saturated lights yeilds slightly improved performance
-- If you wish to skip generating the images, you can download our pre-generated data [[link]](https://ln5.sync.com/dl/a9d93c940#r52yv53r-5jia383k-3s8yrpcj-hwi7729m), and copy to `./synthetic_datasets/night`
+- If you wish to skip generating the images, you can download our pre-generated data [[link]](https://ln5.sync.com/dl/e6db40570#hdqmmykq-fy5bwe4k-8tjsbf53-zxq34ff5), and copy to `./synthetic_datasets/night`
 
 
 ### Train Night Mode ISP on synthetic nighttime images
@@ -146,7 +146,7 @@ Results averaged over 3 folds
 
 
 ### (Optional) Full burst dataset:
-- Our full burst dataset, containing 30 frames at ISO 50, and 10 frames at ISOs 1600 and 3200, can be downloaded here [[link]](https://ln5.sync.com/dl/cb07539a0#rmwpev3t-e28s6gpj-vpv96js2-z7myg939) 
+- Our full burst dataset, containing 30 frames at ISO 50, and 10 frames at ISOs 1600 and 3200, can be downloaded here [[link]](https://ln5.sync.com/dl/c53cd4150#cstvvksj-bp6s2egf-97t4snxn-hy8ahpd4) 
 - Downloading this dataset is NOT required to reproduce the experiments performed in the paper
 - As mentioned in the paper, the bursts can be useful for denoising and other tasks. Please cite our work if you use our dataset
 - The real nighttime dataset used for the above experiments can be generated from the full burst dataset by running `python3 generate_real_gt.py`
